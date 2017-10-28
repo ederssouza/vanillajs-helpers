@@ -166,3 +166,16 @@ function vanillaAddClass(elem, elemClass){
     }
   }
 }
+
+/**
+ *  @param {object} elem 			- selector
+ *  @param {string} elemClass	- class name
+ */
+
+function vanillaHasClass(elem, elemClass){
+  var currentClass = elem.className;
+
+  if(currentClass.indexOf(elemClass) >= 0){
+    return true;
+  }
+}
