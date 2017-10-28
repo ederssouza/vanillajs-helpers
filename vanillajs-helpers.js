@@ -127,3 +127,23 @@ function vanillaClosest(elem, target) {
 
 	return target === 0 ? elem : vanillaClosest(elem.parentNode, target - 1);
 }
+
+/**
+ *  @param {object} elem 			- selector
+ *  @param {string} elemClass	- class name
+ */
+
+function vanillaRemoveClass(elem, elemClass){
+
+  if (elem.classList){
+    elem.classList.remove(elemClass);
+
+  } else {
+    var currentClass = elem.className;
+
+    if(currentClass.indexOf(elemClass) > 1){
+      newClass = currentClass.replace(elemClass,'');
+      elem.className = newClass;
+    }
+  }
+}
