@@ -117,3 +117,13 @@ function vanillaAjaxPost(obj) {
 		xhr.send(obj.data);
 	}
 }
+
+/**
+ *  @param {object} elem 		- selector
+ *  @param {number} target	- element target
+ */
+
+function vanillaClosest(elem, target) {
+
+	return target === 0 ? elem : vanillaClosest(elem.parentNode, target - 1);
+}
