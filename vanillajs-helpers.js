@@ -173,6 +173,7 @@ function vanillaAddClass(elem, elemClass){
  */
 
 function vanillaHasClass(elem, elemClass){
+
   var currentClass = elem.className;
 
   if(currentClass.indexOf(elemClass) >= 0){
@@ -244,5 +245,38 @@ function vanillaFadeIn(elem, display){
     })();
   } else {
     elem.style.display = display || 'block';
+  }
+}
+
+/**
+ *  @param {object} elem - selector
+ */
+
+function vanillaIsHidden(elem){
+
+  var style       = window.getComputedStyle(elem),
+      display     = style.getPropertyValue('display'),
+      visibility  = style.getPropertyValue('visibility'),
+      opacity     = style.getPropertyValue('opacity');
+
+  if(display === 'none' || visibility === 'hidden' || opacity === '0'){
+    return true;
+
+  } else {
+  	return false;
+  }
+}
+
+/**
+ *  @param {object} elem - selector
+ */
+
+function vanillaIsVisible(elem){
+
+  if(!vanillaIsHidden(elem)){
+    return true;
+
+  } else {
+  	return false;
   }
 }
