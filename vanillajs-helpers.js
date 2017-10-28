@@ -179,3 +179,25 @@ function vanillaHasClass(elem, elemClass){
     return true;
   }
 }
+
+/**
+ *  @param {object} elem 			- selector
+ *  @param {string} elemClass	- class name
+ */
+
+function vanillaToggleClass(elem, elemClass){
+
+  if (elem.classList){
+    elem.classList.toggle(elemClass);
+
+  } else {
+    var currentClass = elem.className;
+
+    if(currentClass.indexOf(elemClass) > -1){
+      newClass = currentClass.replace(elemClass,"");
+    } else {
+      newClass = currentClass + " " + elemClass;
+    }
+    elem.className = newClass;
+  }
+}
