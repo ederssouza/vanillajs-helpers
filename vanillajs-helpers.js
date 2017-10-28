@@ -1,13 +1,13 @@
 /**
  *  @param {object} obj -
  *  {
- *  	 url: 'string',						required
- *  	 method: '',							required
- *  	 data: '',								required
+ *  	 url: 'string',				required
+ *  	 method: '',				required
+ *  	 data: '',					required
  *  	 success: function(){},		required
  *  	 before: function(){}, 		[optional]
  *  	 complete: function(){}, 	[optional]
- *  	 error: function(){} 			[optional]
+ *  	 error: function(){} 		[optional]
  *  }
  */
 
@@ -46,11 +46,11 @@ function vanillaAjax(obj) {
 /**
  *  @param {object} obj -
  *  {
- *  	 url: 'string',						required
+ *  	 url: 'string',				required
  *  	 success: function(){},		required
  *  	 before: function(){}, 		[optional]
  *  	 complete: function(){}, 	[optional]
- *  	 error: function(){} 			[optional]
+ *  	 error: function(){} 		[optional]
  *  }
  */
 
@@ -82,12 +82,12 @@ function vanillaAjaxGet(obj) {
 /**
  *  @param {object} obj -
  *  {
- *  	 url: 'string',						required
- *  	 data: '',								required
+ *  	 url: 'string',				required
+ *  	 data: '',					required
  *  	 success: function(){},		required
  *  	 before: function(){}, 		[optional]
  *  	 complete: function(){}, 	[optional]
- *  	 error: function(){} 			[optional]
+ *  	 error: function(){} 		[optional]
  *  }
  */
 
@@ -119,7 +119,7 @@ function vanillaAjaxPost(obj) {
 }
 
 /**
- *  @param {object} elem 		- selector
+ *  @param {object} elem 	- selector
  *  @param {number} target	- element target
  */
 
@@ -129,7 +129,7 @@ function vanillaClosest(elem, target) {
 }
 
 /**
- *  @param {object} elem 			- selector
+ *  @param {object} elem 		- selector
  *  @param {string} elemClass	- class name
  */
 
@@ -149,7 +149,7 @@ function vanillaRemoveClass(elem, elemClass){
 }
 
 /**
- *  @param {object} elem 			- selector
+ *  @param {object} elem 		- selector
  *  @param {string} elemClass	- class name
  */
 
@@ -168,7 +168,7 @@ function vanillaAddClass(elem, elemClass){
 }
 
 /**
- *  @param {object} elem 			- selector
+ *  @param {object} elem 		- selector
  *  @param {string} elemClass	- class name
  */
 
@@ -181,7 +181,7 @@ function vanillaHasClass(elem, elemClass){
 }
 
 /**
- *  @param {object} elem 			- selector
+ *  @param {object} elem 		- selector
  *  @param {string} elemClass	- class name
  */
 
@@ -199,5 +199,50 @@ function vanillaToggleClass(elem, elemClass){
       newClass = currentClass + " " + elemClass;
     }
     elem.className = newClass;
+  }
+}
+
+/**
+ *  @param {object} elem - selector
+ */
+
+function vanillaFadeOut(elem){
+
+  if(window.requestAnimationFrame){
+    elem.style.opacity = 1;
+
+    (function fade() {
+      if ((elem.style.opacity -= 0.1) < 0) {
+        elem.style.display = "none";
+      } else {
+        requestAnimationFrame(fade);
+      }
+    })();
+  } else {
+    elem.style.display = "none";
+  }
+}
+
+/**
+ *  @param {object} elem 	- selector
+ *	@param {string} display	- inline-block or block (default)
+ */
+
+function vanillaFadeIn(elem, display){
+
+  if(window.requestAnimationFrame){
+    elem.style.opacity = 0;
+    elem.style.display = display || 'block';
+
+    (function fade() {
+      var val  = parseFloat(elem.style.opacity),
+          calc = (val += 0.1) > 1;
+      if (!calc) {
+        elem.style.opacity = val;
+        requestAnimationFrame(fade);
+      }
+    })();
+  } else {
+    elem.style.display = display || 'block';
   }
 }
