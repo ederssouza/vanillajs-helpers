@@ -1,14 +1,14 @@
 /**
- *  @param {object} obj -
- *  {
- *  	 url: 'string',				required
- *  	 method: '',				required
- *  	 data: '',					required
- *  	 success: function(){},		required
- *  	 before: function(){}, 		[optional]
- *  	 complete: function(){}, 	[optional]
- *  	 error: function(){} 		[optional]
- *  }
+ *	@param {object} obj -
+ * 	{
+ *		url: 'string',			required
+ *		method: '',				required
+ *		data: 'string',			required
+ *		success: function(){},	required
+ *		before: function(){},	[optional]
+ *		complete: function(){},	[optional]
+ *		error: function(){}		[optional]
+ * 	}
  */
 
 function vanillaAjax(obj) {
@@ -20,7 +20,7 @@ function vanillaAjax(obj) {
 		var xhr = new XMLHttpRequest();
 		xhr.open(obj.method, obj.url, true);
 
-	  // success request
+		// success request
 		xhr.addEventListener('load', obj.success);
 
 		// before request
@@ -44,14 +44,14 @@ function vanillaAjax(obj) {
 }
 
 /**
- *  @param {object} obj -
- *  {
- *  	 url: 'string',				required
- *  	 success: function(){},		required
- *  	 before: function(){}, 		[optional]
- *  	 complete: function(){}, 	[optional]
- *  	 error: function(){} 		[optional]
- *  }
+ *	@param {object} obj -
+ *	{
+ *		url: 'string',			required
+ *		success: function(){},	required
+ *		before: function(){},	[optional]
+ *		complete: function(){},	[optional]
+ *		error: function(){}		[optional]
+ *	}
  */
 
 function vanillaAjaxGet(obj) {
@@ -63,7 +63,7 @@ function vanillaAjaxGet(obj) {
 		var xhr = new XMLHttpRequest();
 		xhr.open(obj.method, obj.url, true);
 
-	  // success request
+		// success request
 		xhr.addEventListener('load', obj.success);
 
 		// before request
@@ -80,15 +80,15 @@ function vanillaAjaxGet(obj) {
 }
 
 /**
- *  @param {object} obj -
- *  {
- *  	 url: 'string',				required
- *  	 data: '',					required
- *  	 success: function(){},		required
- *  	 before: function(){}, 		[optional]
- *  	 complete: function(){}, 	[optional]
- *  	 error: function(){} 		[optional]
- *  }
+ *	@param {object} obj -
+ *	{
+ *		url: 'string',			required
+ *		data: 'string',			required
+ *		success: function(){},	required
+ *		before: function(){},	[optional]
+ *		complete: function(){},	[optional]
+ *		error: function(){}		[optional]
+ *	}
  */
 
 function vanillaAjaxPost(obj) {
@@ -100,7 +100,7 @@ function vanillaAjaxPost(obj) {
 		var xhr = new XMLHttpRequest();
 		xhr.open(obj.method, obj.url, true);
 
-	  // success request
+		// success request
 		xhr.addEventListener('load', obj.success);
 
 		// before request
@@ -120,7 +120,7 @@ function vanillaAjaxPost(obj) {
 
 /**
  *  @param {object} elem 	- selector
- *  @param {number} target	- element target
+ *  @param {number} target 	- element target
  */
 
 function vanillaClosest(elem, target) {
@@ -129,7 +129,7 @@ function vanillaClosest(elem, target) {
 }
 
 /**
- *  @param {object} elem 		- selector
+ *  @param {object} elem		- selector
  *  @param {string} elemClass	- class name
  */
 
@@ -150,7 +150,7 @@ function vanillaRemoveClass(elem, elemClass){
 
 /**
  *  @param {object} elem 		- selector
- *  @param {string} elemClass	- class name
+ *  @param {string} elemClass 	- class name
  */
 
 function vanillaAddClass(elem, elemClass){
@@ -169,7 +169,7 @@ function vanillaAddClass(elem, elemClass){
 
 /**
  *  @param {object} elem 		- selector
- *  @param {string} elemClass	- class name
+ *  @param {string} elemClass 	- class name
  */
 
 function vanillaHasClass(elem, elemClass){
@@ -183,7 +183,7 @@ function vanillaHasClass(elem, elemClass){
 
 /**
  *  @param {object} elem 		- selector
- *  @param {string} elemClass	- class name
+ *  @param {string} elemClass 	- class name
  */
 
 function vanillaToggleClass(elem, elemClass){
@@ -225,8 +225,8 @@ function vanillaFadeOut(elem){
 }
 
 /**
- *  @param {object} elem 	- selector
- *	@param {string} display	- inline-block or block (default)
+ *	@param {object} elem 	- selector
+ *	@param {string} display - inline-block or block (default)
  */
 
 function vanillaFadeIn(elem, display){
