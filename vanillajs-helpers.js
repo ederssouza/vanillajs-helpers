@@ -147,3 +147,22 @@ function vanillaRemoveClass(elem, elemClass){
     }
   }
 }
+
+/**
+ *  @param {object} elem 			- selector
+ *  @param {string} elemClass	- class name
+ */
+
+function vanillaAddClass(elem, elemClass){
+
+  if (elem.classList){
+    elem.classList.add(elemClass);
+
+  } else {
+    var currentClass = elem.className;
+
+    if(currentClass.indexOf(elemClass) < 1){
+      elem.className += ' ' + elemClass;
+    }
+  }
+}
