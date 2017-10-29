@@ -127,7 +127,7 @@ vanillaAjaxGet(obj)
 ```
 
 #### Example
-```html
+```javascript
 vanillaAjaxGet({
   url: 'example.php',
   success: function(){
@@ -173,7 +173,7 @@ vanillaAjaxPost(obj)
 ```
 
 #### Example
-```html
+```javascript
 var user = {
   name: 'John Smith',
   email: 'johnsmith@github.com'
