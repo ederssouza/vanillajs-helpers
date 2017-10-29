@@ -265,7 +265,7 @@ vanillaRemoveClass(elem, elemClass)
   var elem = document.getElementById('wrapper');
 
   button.addEventListener('click', function(){
-  	vanillaRemoveClass(elem, 'bg');
+    vanillaRemoveClass(elem, 'bg');
   });
 </script>
 ```
@@ -298,7 +298,7 @@ vanillaAddClass(elem, elemClass)
   var elem = document.getElementById('wrapper');
 
   button.addEventListener('click', function(){
-  	vanillaAddClass(elem, 'bg');
+    vanillaAddClass(elem, 'bg');
   });
 </script>
 ```
@@ -369,7 +369,7 @@ vanillaToggleClass(elem, elemClass)
   var elem = document.getElementById('wrapper');
 
   button.addEventListener('click', function(){
-  	vanillaToggleClass(elem, 'bg');
+    vanillaToggleClass(elem, 'bg');
   });
 </script>
 ```
@@ -402,7 +402,7 @@ vanillaClosest(elem, target)
   var elem = document.getElementById('wrapper');
 
   button.addEventListener('click', function(){
-  	console.log(vanillaClosest(this, 2)); // return body
+    console.log(vanillaClosest(this, 2)); // return body
   });
 </script>
 ```
@@ -432,7 +432,7 @@ vanillaFadeOut(elem)
   var elem = document.getElementById('wrapper');
 
   button.addEventListener('click', function(){
-  	vanillaFadeOut(elem);
+    vanillaFadeOut(elem);
   });
 </script>
 ```
@@ -461,7 +461,7 @@ vanillaFadeIn(elem, display)
   var elem = document.getElementById('wrapper');
 
   button.addEventListener('click', function(){
-  	vanillaFadeIn(elem);
+    vanillaFadeIn(elem);
   });
 </script>
 ```
