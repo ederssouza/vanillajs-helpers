@@ -1,0 +1,27 @@
+{
+  "name": "vanillajs-helpers",
+  "version": "1.0.0",
+  "description": "JavaScript functions set to aid in your development process",
+  "main": "dist/js/vanillajs-helpers.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ederssouza/vanillajs-helpers.git"
+  },
+  "author": "Eder Sampaio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ederssouza/vanillajs-helpers/issues"
+  },
+  "homepage": "https://github.com/ederssouza/vanillajs-helpers#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-logger": "0.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1"
+  }
+}

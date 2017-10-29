@@ -60,3 +60,4 @@ typings/
 index.html
 mock-get.php
 mock-post.php
+package-lock.json
