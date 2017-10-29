@@ -61,7 +61,7 @@ function vanillaAjaxGet(obj) {
 
 	} else {
 		var xhr = new XMLHttpRequest();
-		xhr.open(obj.method, obj.url, true);
+		xhr.open('GET', obj.url, true);
 
 		// success request
 		xhr.addEventListener('load', obj.success);
@@ -93,33 +93,33 @@ function vanillaAjaxGet(obj) {
 
 function vanillaAjaxPost(obj) {
 
-	if(obj.url === undefined || obj.data === undefined || obj.success === undefined) {
-		throw new Error('The url, data, and success parameters are required in the vanillaAjax({url: "", data: "", success: ""}). Visit https://github.com/ederssouza/vanillajs-helpers for more information.');
+  if(obj.url === undefined || obj.data === undefined || obj.success === undefined) {
+    throw new Error('The url, data, and success parameters are required in the vanillaAjax({url: "", data: "", success: ""}). Visit https://github.com/ederssouza/vanillajs-helpers for more information.');
 
-	} else {
-		var xhr = new XMLHttpRequest();
-		xhr.open(obj.method, obj.url, true);
+  } else {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', obj.url, true);
 
-		// success request
-		xhr.addEventListener('load', obj.success);
+    // success request
+    xhr.addEventListener('load', obj.success);
 
-		// before request
-		if(obj.before !== undefined) xhr.addEventListener('loadstart', obj.before);
+    // before request
+    if(obj.before !== undefined) xhr.addEventListener('loadstart', obj.before);
 
-		// complete request
-		if(obj.complete !== undefined) xhr.addEventListener('loadend', obj.complete);
+    // complete request
+    if(obj.complete !== undefined) xhr.addEventListener('loadend', obj.complete);
 
-		// error
-		if(obj.error !== undefined) xhr.addEventListener('error', obj.error);
+    // error
+    if(obj.error !== undefined) xhr.addEventListener('error', obj.error);
 
-		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-		xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-		xhr.send(obj.data);
-	}
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.send(obj.data);
+  }
 }
 
 /**
- *  @param {object} elem - selector
+ *  @param {object} elem - form selector
  */
 
 function vanillaSerialize(form) {

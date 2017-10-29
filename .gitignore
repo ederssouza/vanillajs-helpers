@@ -58,6 +58,5 @@ typings/
 .env
 
 index.html
-mock-get.php
-mock-post.php
+example.php
 package-lock.json
