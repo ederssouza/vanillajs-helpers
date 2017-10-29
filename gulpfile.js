@@ -62,7 +62,7 @@ gulp.task('scripts', ['jshint'], () => {
  *	and run related tasks (asynchronous task)
  */
 
-gulp.task('watch', () => {
+gulp.task('watch', ['scripts'], () => {
 
 	gulp.watch('src/js/**/*.js', ['scripts']);
 });

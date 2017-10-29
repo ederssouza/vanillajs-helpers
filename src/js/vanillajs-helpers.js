@@ -119,6 +119,34 @@ function vanillaAjaxPost(obj) {
 }
 
 /**
+ *  @param {object} elem - selector
+ */
+
+function vanillaSerialize(form) {
+
+  var result = [];
+
+  if (typeof form === 'object' && form.nodeName === 'FORM')
+    Array.prototype.slice.call(form.elements).forEach(function(control) {
+      if (
+        control.name &&
+        !control.disabled &&
+        ['file', 'reset', 'submit', 'button'].indexOf(control.type) === -1
+      )
+      if (control.type === 'select-multiple')
+        Array.prototype.slice.call(control.options).forEach(function(option) {
+          if (option.selected)
+              result.push(encodeURIComponent(control.name) + '=' + encodeURIComponent(option.value));
+        });
+      else if (
+        ['checkbox', 'radio'].indexOf(control.type) === -1 ||
+        control.checked
+      ) result.push(encodeURIComponent(control.name) + '=' + encodeURIComponent(control.value));
+    });
+    return result.join('&').replace(/%20/g, '+');
+}
+
+/**
  *  @param {object} elem    - selector
  *  @param {number} target  - element target
  */
