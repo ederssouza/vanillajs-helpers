@@ -232,8 +232,7 @@ function vanillaToggleClass(elem, elemClass){
 }
 
 /**
- *  @param {object} elem      - selector
- *  @param {string} elemClass - class name
+ *  @param {object} elem - selector
  */
 
 function vanillaFadeOut(elem){
