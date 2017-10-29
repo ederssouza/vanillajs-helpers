@@ -9,7 +9,7 @@
  * 	{
  *		url: 'string',          required
  *		method: '',             required
- *		data: 'string',			required
+ *		data: 'string',		required
  *		success: function(){},  required
  *		before: function(){},	[optional]
  *		complete: function(){},	[optional]
@@ -67,8 +67,8 @@ vanillaSerialize(form)
 ### vanillaRemoveClass
 ```javascript
 /**
- *  @param {object} elem		- selector
- *  @param {string} elemClass	- class name
+ *  @param {object} elem 	- selector
+ *  @param {string} elemClass 	- class name
  */
 
 vanillaRemoveClass(elem, elemClass)
@@ -77,7 +77,7 @@ vanillaRemoveClass(elem, elemClass)
 ### vanillaAddClass
 ```javascript
 /**
- *  @param {object} elem		- selector
+ *  @param {object} elem 	- selector
  *  @param {string} elemClass	- class name
  */
 
@@ -87,7 +87,7 @@ vanillaAddClass(elem, elemClass)
 ### vanillaHasClass
 ```javascript
 /**
- *  @param {object} elem		- selector
+ *  @param {object} elem 	- selector
  *  @param {string} elemClass	- class name
  */
 
@@ -97,7 +97,7 @@ vanillaHasClass(elem, elemClass)
 ### vanillaToggleClass
 ```javascript
 /**
- *  @param {object} elem		- selector
+ *  @param {object} elem 	- selector
  *  @param {string} elemClass	- class name
  */
 
@@ -130,8 +130,8 @@ vanillaFadeOut(elem)
 ### vanillaFadeIn
 ```javascript
 /**
- *	@param {object} elem 		- selector
- *	@param {string} display  	- inline-block or block (default)
+ *	@param {object} elem	- selector
+ *	@param {string} display	- inline-block or block (default)
  */
 
 vanillaFadeIn(elem, display)
